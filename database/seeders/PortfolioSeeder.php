@@ -310,7 +310,6 @@ class PortfolioSeeder extends Seeder
             'DevOps' => ['Infrastructure', 3],
             'CMS & Automations' => ['Automation', 4],
             'Mobile Development' => ['Mobile', 5],
-            'Ethical Hacking' => ['Security', 6],
         ];
 
         foreach ($skillCategories as $title => [$category, $order]) {
@@ -318,5 +317,9 @@ class PortfolioSeeder extends Seeder
                 ->where('title', $title)
                 ->update(['category' => $category, 'display_order' => $order]);
         }
+
+        // "Ethical Hacking" is kept out of the public portfolio — some clients
+        // are wary of the framing. Deleting the skill cascades to its tech links.
+        DB::table('skills')->where('title', 'Ethical Hacking')->delete();
     }
 }

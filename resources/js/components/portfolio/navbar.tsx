@@ -1,5 +1,6 @@
 import { Link, router, usePage } from '@inertiajs/react';
-import { CalendarClock, LayoutDashboard, Menu, Terminal } from 'lucide-react';
+import { CalendarClock, LayoutDashboard, Menu } from 'lucide-react';
+import { GpLogo } from '@/components/portfolio/logo';
 import { ThemeToggle } from '@/components/portfolio/theme-toggle';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
@@ -31,8 +32,8 @@ export function Navbar() {
     return (
         <nav className="sticky top-0 z-50 w-full border-b border-border bg-background/80 backdrop-blur-md">
             <div className="container mx-auto flex h-16 items-center justify-between px-4">
-                <Link href={home()} className="flex items-center gap-2 font-mono text-xl font-bold">
-                    <Terminal className="h-6 w-6 text-primary" />
+                <Link href={home()} className="flex items-center gap-2.5 text-xl font-bold">
+                    <GpLogo className="h-8 w-8" />
                     <span>Gerald Pajulas</span>
                 </Link>
 

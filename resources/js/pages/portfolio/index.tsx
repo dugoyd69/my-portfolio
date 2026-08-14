@@ -9,7 +9,6 @@ import { Projects } from '@/components/portfolio/projects';
 import { Reveal } from '@/components/portfolio/reveal';
 import { Skills } from '@/components/portfolio/skills';
 import { StatsBand } from '@/components/portfolio/stats-band';
-import { Testimonials } from '@/components/portfolio/testimonials';
 import type { Project, Skill } from '@/types/portfolio';
 
 interface PortfolioPageProps {
@@ -49,9 +48,6 @@ export default function PortfolioIndex({ skills, projects, projectCount }: Portf
                 </Reveal>
                 <Reveal>
                     <Projects projects={projects} />
-                </Reveal>
-                <Reveal>
-                    <Testimonials />
                 </Reveal>
                 <Reveal>
                     <Contact />

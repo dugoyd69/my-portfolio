@@ -1,12 +1,13 @@
-import { Github, Linkedin, Mail, Terminal } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
+import { GpLogo } from '@/components/portfolio/logo';
 
 export function Footer() {
     return (
         <footer className="border-t border-border py-8">
             <div className="container mx-auto px-4">
                 <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-                    <div className="flex items-center gap-2 font-mono">
-                        <Terminal className="h-5 w-5 text-primary" />
+                    <div className="flex items-center gap-2">
+                        <GpLogo className="h-7 w-7" />
                         <span className="font-bold">Gerald Pajulas</span>
                     </div>
 

@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx tsc *)",
+      "Bash(npm run *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(python -c \"import PIL; print\\('PIL', PIL.__version__\\)\")",
+      "Read(//c/Windows/Fonts/**)",
+      "Bash(python \"/c/Users/Gerald/AppData/Local/Temp/claude/C--Users-Gerald-Herd-my-portfolio/45495085-022b-4268-8472-74e8b0ce11f5/scratchpad/make_icons.py\")"
+    ]
+  }
+}

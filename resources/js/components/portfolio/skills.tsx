@@ -26,6 +26,11 @@ export function Skills({ skills }: { skills: Skill[] }) {
                         const isAiSkill =
                             title.includes('ai') || title.includes('automation') || title.includes('cms');
 
+                        const MAX_BADGES = 5;
+                        const allTech = skill.technologies ?? [];
+                        const visibleTech = allTech.slice(0, MAX_BADGES);
+                        const extraTech = allTech.length - visibleTech.length;
+
                         return (
                             <div
                                 key={skill.id}
@@ -67,10 +72,15 @@ export function Skills({ skills }: { skills: Skill[] }) {
                                     {skill.description}
                                 </p>
 
-                                <div className="mt-auto flex flex-wrap gap-2 border-t border-border/50 pt-4">
-                                    {skill.technologies?.map((tech) => (
+                                <div className="mt-auto flex flex-wrap items-center gap-2 border-t border-border/50 pt-4">
+                                    {visibleTech.map((tech) => (
                                         <TechBadge key={tech.id} name={tech.name} domain={tech.domain} />
                                     ))}
+                                    {extraTech > 0 && (
+                                        <span className="rounded-full px-2.5 py-1 text-xs font-medium text-muted-foreground">
+                                            +{extraTech} more
+                                        </span>
+                                    )}
                                 </div>
                             </div>
                         );

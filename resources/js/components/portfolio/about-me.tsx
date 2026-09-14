@@ -10,7 +10,7 @@ const edges = [
     {
         icon: Shield,
         title: 'Security-First',
-        description: 'Ethical-hacking background — every endpoint built to be fortified.',
+        description: 'Hardened authentication, validated inputs, and secure deployments by default.',
     },
     {
         icon: TrendingUp,

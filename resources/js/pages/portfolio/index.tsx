@@ -29,10 +29,10 @@ export default function PortfolioIndex({ skills, projects, projectCount }: Portf
 
     return (
         <div className="min-h-screen bg-background">
-            <Head title="Gerald Pajulas — Developer, Hacker & Network Engineer">
+            <Head title="Gerald Pajulas — Full-Stack Engineer & Automation Specialist">
                 <meta
                     name="description"
-                    content="Portfolio of Gerald Pajulas — Developer, Ethical Hacker, and Network Engineer. Building secure systems and robust infrastructures."
+                    content="Gerald Pajulas builds custom web applications, API integrations, and n8n automation workflows that help businesses scale — from high-converting e-commerce systems to custom booking engines."
                 />
             </Head>
 

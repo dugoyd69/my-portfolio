@@ -1,46 +1,7 @@
 import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
-import { useEffect, useState } from 'react';
-import { Typewriter } from '@/components/portfolio/typewriter';
 import { Button } from '@/components/ui/button';
 
 export function Hero() {
-    const [text, setText] = useState('Gerald Pajulas');
-
-    useEffect(() => {
-        const targets = ['Gerald Pajulas', 'Gerald'];
-        let currentIndex = 0;
-        const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*';
-
-        const intervalId = setInterval(() => {
-            currentIndex = (currentIndex + 1) % targets.length;
-            const nextText = targets[currentIndex];
-            let iteration = 0;
-
-            const scrambleId = setInterval(() => {
-                setText(
-                    nextText
-                        .split('')
-                        .map((letter, index) => {
-                            if (index < iteration) {
-                                return nextText[index];
-                            }
-                            return chars[Math.floor(Math.random() * chars.length)];
-                        })
-                        .join(''),
-                );
-
-                if (iteration >= nextText.length) {
-                    clearInterval(scrambleId);
-                    setText(nextText);
-                }
-
-                iteration += 1 / 3;
-            }, 30);
-        }, 4000);
-
-        return () => clearInterval(intervalId);
-    }, []);
-
     return (
         <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-accent/10" />
@@ -59,28 +20,23 @@ export function Hero() {
                     </div>
 
                     <div className="animate-fade-in space-y-4 opacity-0 [animation-delay:0.4s] [animation-fill-mode:forwards]">
-                        <p className="text-lg font-medium text-muted-foreground md:text-xl">Hello, I'm</p>
-                        <h1 className="min-h-[1.2em] py-2 text-5xl font-bold tracking-tight md:text-7xl lg:text-8xl">
-                            <span className="inline-block bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text pb-4 text-transparent">
-                                {text}
+                        <p className="text-lg font-medium text-muted-foreground md:text-xl">Hi, I'm Gerald Pajulas</p>
+                        <h1 className="mx-auto max-w-4xl text-4xl font-bold tracking-tight md:text-6xl lg:text-7xl">
+                            <span className="inline-block bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text pb-2 text-transparent">
+                                Full-Stack Engineer &amp; Automation Specialist
                             </span>
                         </h1>
                     </div>
 
                     <div className="animate-fade-in opacity-0 [animation-delay:0.6s] [animation-fill-mode:forwards]">
-                        <p className="text-xl font-semibold text-muted-foreground md:text-2xl lg:text-3xl">
-                            <Typewriter />
+                        <p className="mx-auto max-w-3xl text-base leading-relaxed text-muted-foreground/80 md:text-lg">
+                            I build custom web applications, complex API integrations, and n8n workflows that eliminate
+                            manual tasks and help businesses scale. From high-converting e-commerce systems to custom
+                            booking engines, I handle the heavy technical lifting.
                         </p>
                     </div>
 
-                    <div className="animate-fade-in opacity-0 [animation-delay:0.8s] [animation-fill-mode:forwards]">
-                        <p className="max-w-2xl text-base leading-relaxed text-muted-foreground/80 md:text-lg">
-                            Passionate about building secure systems, exploring vulnerabilities ethically, and
-                            architecting robust network infrastructures. Let's create something amazing together.
-                        </p>
-                    </div>
-
-                    <div className="animate-fade-in flex flex-wrap justify-center gap-4 opacity-0 [animation-delay:1s] [animation-fill-mode:forwards]">
+                    <div className="animate-fade-in flex flex-wrap justify-center gap-4 opacity-0 [animation-delay:0.8s] [animation-fill-mode:forwards]">
                         <Button
                             size="lg"
                             className="group"
@@ -99,7 +55,7 @@ export function Hero() {
                         </Button>
                     </div>
 
-                    <div className="animate-fade-in flex gap-4 pt-8 opacity-0 [animation-delay:1.2s] [animation-fill-mode:forwards]">
+                    <div className="animate-fade-in flex gap-4 pt-8 opacity-0 [animation-delay:1s] [animation-fill-mode:forwards]">
                         <a
                             href="https://github.com/dugoyd69"
                             target="_blank"
